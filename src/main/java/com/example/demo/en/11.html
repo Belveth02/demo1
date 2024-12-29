@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户报修页面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>居民社区报修系统 - 用户报修</h1>
+    <nav>
+        <ul>
+            <li><a href="user_home.html">首页</a></li>
+            <li><a href="user_repair.html">提交报修</a></li>
+            <li><a href="logout.html">退出登录</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>提交报修申请</h2>
+    <form action="submit_repair.php" method="post">
+        <label for="repair_type">报修类型：</label>
+        <select id="repair_type" name="repair_type">
+            <option value="水电维修">水电维修</option>
+            <option value="家电维修">家电维修</option>
+            <option value="其他">其他</option>
+        </select>
+        <br><br>
+        <label for="description">详细描述：</label>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+        <br><br>
+        <label for="upload">上传图片：</label>
+        <input type="file" id="upload" name="upload">
+        <br><br>
+        <input type="submit" value="提交报修">
+    </form>
+</main>
+</body>
+</html>
